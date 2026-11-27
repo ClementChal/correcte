@@ -1,0 +1,76 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="webkitdirectory" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="amqp" />
+          <option value="annotated-types" />
+          <option value="asgiref" />
+          <option value="azure-core" />
+          <option value="azure-storage-blob" />
+          <option value="billiard" />
+          <option value="celery" />
+          <option value="certifi" />
+          <option value="cffi" />
+          <option value="charset-normalizer" />
+          <option value="click" />
+          <option value="click-didyoumean" />
+          <option value="click-plugins" />
+          <option value="click-repl" />
+          <option value="cryptography" />
+          <option value="defusedxml" />
+          <option value="django" />
+          <option value="django-celery-results" />
+          <option value="django-cors-headers" />
+          <option value="django-storages" />
+          <option value="djangorestframework" />
+          <option value="djangorestframework-camel-case" />
+          <option value="djangorestframework-simplejwt" />
+          <option value="djoser" />
+          <option value="faker" />
+          <option value="idna" />
+          <option value="isodate" />
+          <option value="kombu" />
+          <option value="oauthlib" />
+          <option value="packaging" />
+          <option value="pillow" />
+          <option value="prompt-toolkit" />
+          <option value="psycopg2-binary" />
+          <option value="pycparser" />
+          <option value="pydantic" />
+          <option value="pydantic-core" />
+          <option value="pyjwt" />
+          <option value="python-dateutil" />
+          <option value="python-dotenv" />
+          <option value="python3-openid" />
+          <option value="redis" />
+          <option value="requests" />
+          <option value="requests-oauthlib" />
+          <option value="ruff" />
+          <option value="six" />
+          <option value="social-auth-app-django" />
+          <option value="social-auth-core" />
+          <option value="sqlparse" />
+          <option value="typing-extensions" />
+          <option value="typing-inspection" />
+          <option value="tzdata" />
+          <option value="urllib3" />
+          <option value="vine" />
+          <option value="wcwidth" />
+          <option value="whitenoise" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

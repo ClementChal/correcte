@@ -1,0 +1,16 @@
+[package]
+name = "correcte"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+arboard = { version = "3.6", default-features = false }
+slint = { version = "1.19", default-features = false, features = [
+    "accessibility",
+    "backend-winit-x11",
+    "compat-1-2",
+    "renderer-software",
+] }
+
+[build-dependencies]
+slint-build = "1.19"

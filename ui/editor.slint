@@ -1,0 +1,73 @@
+import { Button, TextEdit } from "std-widgets.slint";
+
+export component Editor inherits Window {
+    title: "Correcte";
+    preferred-width: 620px;
+    preferred-height: 380px;
+    min-width: 380px;
+    min-height: 240px;
+    forward-focus: editor;
+
+    in-out property <string> editor-text <=> editor.text;
+    in property <bool> correcting;
+    in property <string> status;
+
+    callback edit-text(string);
+    callback correct-text();
+    callback copy-text();
+    callback close-editor();
+
+    public function focus-editor() {
+        editor.focus();
+    }
+
+    FocusScope {
+        width: parent.width;
+        height: parent.height;
+        focus-on-click: false;
+        capture-key-pressed(event) => {
+            if (event.text == Key.Escape) {
+                root.close-editor();
+                return accept;
+            }
+            return reject;
+        }
+
+        VerticalLayout {
+            padding: 16px;
+            spacing: 12px;
+
+            editor := TextEdit {
+                accessible-label: "Texte à corriger";
+                placeholder-text: "Texte à corriger";
+                read-only: root.correcting;
+                vertical-stretch: 1;
+                edited(text) => { root.edit-text(text); }
+            }
+
+            HorizontalLayout {
+                spacing: 8px;
+                alignment: start;
+
+                Button {
+                    text: "Corriger";
+                    enabled: !root.correcting && root.editor-text != "";
+                    clicked => { root.correct-text(); }
+                }
+
+                Button {
+                    text: "Copier";
+                    enabled: !root.correcting && root.editor-text != "";
+                    clicked => { root.copy-text(); }
+                }
+
+                Text {
+                    text: root.status;
+                    vertical-alignment: center;
+                    wrap: word-wrap;
+                    horizontal-stretch: 1;
+                }
+            }
+        }
+    }
+}
