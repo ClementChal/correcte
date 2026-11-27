@@ -1,2 +1,10 @@
-/target
+# Rust build artifacts
+target/
+/debug/
+*.rs.bk
+*.pdb
+rustc-ice-*.txt
+
+# Local project files
+/.codegraph/
 /docs/
